@@ -22,7 +22,7 @@ This project is built entirely in **Python** and relies on its standard library 
 
 * **Python 3.x**
 * **`random`**: For generating random sequences and characters.
-* **`pyfiglet`**: For creating the ASCII art header.
+* **`string`**: For capitalizing and conacatenation methods.
 * **`array`**: Used for internal data handling (though often the standard Python lists are preferred for general use).
 
 ---
@@ -42,13 +42,6 @@ You need **Python 3.x** installed on your system.
     git clone [https://github.com/YourUsername/your-project-name.git](https://github.com/YourUsername/your-project-name.git)
     cd your-project-name
     ```
-
-2.  **Install Dependencies:**
-    The only third-party dependency is `pyfiglet`. Install it using pip:
-    ```bash
-    pip install pyfiglet
-    ```
-
 ---
 
 ## 💡 Usage

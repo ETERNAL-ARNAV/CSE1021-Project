@@ -1,13 +1,12 @@
 #importing all the necessary modules to make the password generator
-import pyfiglet
+import string
 import random
 import array as ar
-from art import *
 
 #The big interface
 print("")
 print("\t\t\t\t" + "="*63)
-print("\t\t\t\t\t\tWELCOME TO THE PASSWORD GENERATOR")
+print(f"\t\t\t\t\t\t{string.capwords("welcome to the password generator")}")
 print("\t\t\t\t" + "="*63)
 print("")
 #our password,initialized

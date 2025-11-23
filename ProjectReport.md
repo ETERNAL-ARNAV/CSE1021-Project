@@ -16,7 +16,7 @@ This project is a command-line interface (CLI) utility built in **Python** desig
 | :--- | :--- | :--- |
 | **Language** | **Python 3.x** | Core development language. |
 | **Randomization** | **random** | Used for character selection and injection point determination to ensure unpredictability. |
-| **Aesthetics** | **pyfiglet** | Used for displaying the "PASSWORD GENERATOR" title in ASCII art. |
+| **Aesthetics** | **string** | used for concatenation methods, and capitalization  |
 | **User Input** | **Standard CLI Input** | Handles user interaction for mode, strength, and base string input. |
 
 ---
