@@ -2,11 +2,14 @@
 import pyfiglet
 import random
 import array as ar
+from art import *
 
 #The big interface
-big_text = pyfiglet.figlet_format("PASSWORD GENERATOR",font="slant")
-print(big_text)
-
+print("")
+print("\t\t\t\t" + "="*63)
+print("\t\t\t\t\t\tWELCOME TO THE PASSWORD GENERATOR")
+print("\t\t\t\t" + "="*63)
+print("")
 #our password,initialized
 password = ""
 
@@ -104,7 +107,8 @@ if ask=="R":
         print(password)
 
     else:
-        pass
+        print("kindly enter input correctly and retry")
+
 elif ask=="C":
     #custom array creation and ask for custom string
     ask3 = input("Enter the custom string--->")
@@ -119,13 +123,13 @@ elif ask=="C":
     #custom weak password
     if ask4 == 'W':
         passwordlen = 6
-        if len(custom_array)==passwordlen and len(password)!=passwordlen:
+        if len(custom_array)==passwordlen:
             while j<2:
                 random_num2 = random.randint(0,len(custom_array)-1)
                 custom_array.pop(random_num2)
                 j = j + 1
             i = 0
-        while i<passwordlen:
+        while i<passwordlen and len(password)!=passwordlen:
             random_num2 = random.randint(0,6)
             random_num1 = random.randint(0,len(special_char) - 1)
             if random_num2==2 or random_num2==5:
