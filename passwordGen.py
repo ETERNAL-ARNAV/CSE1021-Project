@@ -4,7 +4,7 @@ import random
 import array as ar
 
 #The big interface
-big_text = pyfiglet.figlet_format("PASSWORD GENERATOR",font="big")
+big_text = pyfiglet.figlet_format("PASSWORD GENERATOR",font="slant")
 print(big_text)
 
 #our password,initialized
@@ -17,6 +17,9 @@ special_char = ar.array('w',['!','@','$','%','&','^','*','#','_','(',')','-','='
 
 #alphabet array
 alphabet_lower_array = ar.array('w',['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'])
+
+#number array
+num_array = ar.array('i',[0,1,2,3,4,5,6,7,8,9,10])
 
 #required functions
 def capital(e):
@@ -57,8 +60,8 @@ if ask=="R":
         while i<passwordlen and len(password)!=passwordlen:
             random_num1 = random.randint(1,7)
             if random_num1==1 or random_num1==4:
-                random_num2 = random.randint(0,len(special_char)-1)
-                password = password + special_char[random_num2]
+                random_num2 = random.randint(0,len(num_array)-1)
+                password = password + str(num_array[random_num2])
             else:
                password = addAlphabets_random(password)
             i = i + 1
@@ -69,9 +72,14 @@ if ask=="R":
         passwordlen = 8
         while i<passwordlen and len(password)!=passwordlen:
             random_num1 = random.randint(0,12)
-            if random_num1==0 or random_num1==4 or random_num1 == 8 or random_num1 == 12:
-                random_num2 = random.randint(0,len(special_char)-1)
-                password = password + special_char[random_num2]
+            if random_num1==0 or random_num1 == 8 or random_num1 == 12 or random_num1 == 4 or random_num1 == 12:
+                decide = random.randint(0,1)
+                if decide==0:
+                    random_num2 = random.randint(0,len(special_char)-1)
+                    password = password + special_char[random_num2]
+                else:
+                    random_num2 = random.randint(0,len(num_array)-1)
+                    password = password + str(num_array[random_num2])
             else:
                 password = addAlphabets_random(password)
             i = i + 1
@@ -83,8 +91,13 @@ if ask=="R":
         while i<passwordlen and len(password)!=passwordlen:
             random_num1 = random.randint(0,12)
             if random_num1==0 or random_num1==4 or random_num1 == 8 or random_num1 == 12 or random_num1 ==2 or random_num1 == 10:
-                random_num2 = random.randint(0,len(special_char)-1)
-                password = password + special_char[random_num2]
+                decide = random.randint(0,1)
+                if decide==0:
+                    random_num2 = random.randint(0,len(special_char)-1)
+                    password = password + special_char[random_num2]
+                else:
+                    random_num2 = random.randint(0,len(num_array)-1)
+                    password = password + str(num_array[random_num2])
             else:
                 password = addAlphabets_random(password)
             i = i + 1
@@ -161,6 +174,6 @@ elif ask=="C":
             i = i + 1
         print(password)
     else:
-        pass
+        print("kindly enter input correctly and retry")
 else:
-    pass
+    print("kindly enter input correctly and restart the program")
